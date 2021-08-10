@@ -27,8 +27,8 @@
   "bg": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages3.alphacoders.com%2F106%2F1060203.jpg&f=1&nofb=1",
   "theme": {
     "colors": {
-      "primary": "#03a9f4",
-      "secondary": "#e91e63",
+      "primary": "#2c387e",
+      "secondary": "#3f51b5",
       "success": "#00a152",
       "wrong": "#d50000",
       "mainBg": "#000"

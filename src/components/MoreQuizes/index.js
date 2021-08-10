@@ -1,8 +1,9 @@
-import styled from "styled-components";
+import styled from 'styled-components';
+import db from "../../../db.json";
 
 const MoreQuizes = styled.div`
-  background-color: #000;
-  width: 360px;
+  background-color: ${db.theme.colors.secondary};
+  width: 350px;
 
   p {
     line-height: 1;
@@ -21,6 +22,7 @@ const MoreQuizes = styled.div`
 
 MoreQuizes.Header = styled.header`
   color: white;
+  background-color: ${db.theme.colors.primary};
 `;
 
 MoreQuizes.Content = styled.div`

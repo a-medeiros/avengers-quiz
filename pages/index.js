@@ -1,4 +1,7 @@
+import React, { useState } from "react";
 import styled from "styled-components";
+import Head from "next/head";
+import { useRouter } from "next/router";
 import PlayQuiz from "../src/components/PlayQuiz";
 import MoreQuizes from "../src/components/MoreQuizes";
 import QuizBackground from "../src/components/QuizBackground";
@@ -6,12 +9,19 @@ import QuizBackground from "../src/components/QuizBackground";
 const QuizContainer = styled.section`
   position: absolute;
   top: 100px;
-  left: 100px;
+  left: 150px;
+  font-family: "Lato", sans-serif;
 `;
 
 export default function Home() {
+  const [name, setName] = useState("");
+  const router = useRouter();
+
   return (
     <QuizBackground>
+      <Head>
+        <title>Avengers Quiz</title>
+      </Head>
       <QuizContainer>
         <PlayQuiz>
           <PlayQuiz.Header>
@@ -19,8 +29,18 @@ export default function Home() {
           </PlayQuiz.Header>
           <PlayQuiz.Content>
             <p>Teste os seus conhecimentos sobre os Vingadores</p>
-            <input placeholder='Diz aí o seu nome para jogar :)' />
-            <button>JOGAR</button>
+            <form onSubmit={(e) => {
+              e.preventDefault();
+              if (name === "") {
+                alert("Name cannot be empty!");
+              } else {
+                router.push(`/quiz?name=${name}`);
+              }
+            }}
+            >
+              <input id="name" name="name" value={name} onChange={(e) => setName(e.target.value)} placeholder="Diz aí o seu nome para jogar :)" />
+              <button type="submit">JOGAR</button>
+            </form>
           </PlayQuiz.Content>
         </PlayQuiz>
         <MoreQuizes>
@@ -29,9 +49,6 @@ export default function Home() {
           </MoreQuizes.Header>
           <MoreQuizes.Content>
             <p>Dá uma olhada nesses Quizes incríveis...</p>
-            <button>Quiz1</button>
-            <button>Quiz2</button>
-            <button>Quiz3</button>
           </MoreQuizes.Content>
         </MoreQuizes>
       </QuizContainer>
