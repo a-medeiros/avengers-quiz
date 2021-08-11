@@ -11,6 +11,15 @@ const QuizContainer = styled.section`
   top: 100px;
   left: 150px;
   font-family: "Lato", sans-serif;
+
+  @media (max-width: 700px) {
+    position: static; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
 `;
 
 export default function Home() {

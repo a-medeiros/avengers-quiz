@@ -6,21 +6,15 @@ const PlayQuiz = styled.div`
   width: 350px;
   margin-bottom: 30px;
 
-  h1,
-  h2,
-  h3 {
+  h1, h2, h3 {
     margin: 0;
     padding: 15px 20px;
   }
 
-  input {
-    width: 270px;
-    outline: none;
-    border-radius: 5px;
-    border: 1px solid white;
-    padding: 10px;
-    margin-bottom: 10px;
+  @media (max-width: 600px) {
+    width: 330px;
   }
+
 `;
 
 PlayQuiz.Header = styled.header`
@@ -52,14 +46,24 @@ PlayQuiz.Content = styled.div`
   }
 
   form {
-    max-width: 310px;
+    width: 310px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: none;
+  }
+
+  input {
+    width: 286px;
+    padding: 10px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid white;
+    margin-bottom: 10px;
   }
 
   button {
-    width: 291px;
+    width: 310px;
     padding: 10px;
     background-color: #ffc107;
     border: 1px solid #ffc107;
@@ -69,6 +73,28 @@ PlayQuiz.Content = styled.div`
     cursor: pointer;
     border-radius: 3px;
   }
+
+
+  @media (max-width: 600px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    form {
+      max-width: 300px;
+    }
+
+    input {
+      width: 260px;
+    }
+
+    button {
+      width: 281px;
+    }
+
+  }
+
 `;
 
 export default PlayQuiz;
