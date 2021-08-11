@@ -5,30 +5,37 @@
     {
       "id": 1,
       "question": "Em que ano foi lançado o primeiro Homem de Ferro?",
-      "img": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi1.wp.com%2Fcinematologia.com.br%2Fcine%2Fwp-content%2Fuploads%2F2019%2F04%2FCapa.jpg%3Ffit%3D1024%252C576%26ssl%3D1&f=1&nofb=1",
+      "img": "/ironman.jpg",
+      "alt": "Iron Man",
       "answer": "2008"
     },
     {
       "id": 2,
       "question": "Em que ano foi lançado o primeiro Homem de Ferro?",
+      "img": "/ironman.jpg",
+      "alt": "Iron Man",
       "answer": "2008"
     },
     {
       "id": 3,
       "question": "Em que ano foi lançado o primeiro Homem de Ferro?",
+      "img": "/ironman.jpg",
+      "alt": "Iron Man",
       "answer": "2008"
     },
     {
       "id": 4,
       "question": "Em que ano foi lançado Capitão America: Guerra Civil?",
+      "img": "/ironman.jpg",
+      "alt": "Iron Man",
       "answer": "2008"
     }
   ],
   "bg": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages3.alphacoders.com%2F106%2F1060203.jpg&f=1&nofb=1",
   "theme": {
     "colors": {
-      "primary": "#2c387e",
-      "secondary": "#3f51b5",
+      "primary": "#3f51b5",
+      "secondary": "#2c387e",
       "success": "#00a152",
       "wrong": "#d50000",
       "mainBg": "#000"

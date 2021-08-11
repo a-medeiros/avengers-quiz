@@ -1,21 +1,28 @@
 import React from "react";
+import Image from "next/image";
 import QuizBackground from "../src/components/QuizBackground";
 import QuestionContainer from "../src/components/Question";
+import db from "../db.json";
 
 function Quiz() {
   return (
     <QuizBackground>
       <QuestionContainer>
         <QuestionContainer.Header>
-          <p>Pergunta 1 de 5</p>
-          <img src="" alt="movie" />
+          <h3>Pergunta 1 de 5</h3>
+          <Image src={db.questions[0].img} width="350" height="200" objectFit="cover" alt={db.questions[0].alt} />
         </QuestionContainer.Header>
         <QuestionContainer.Content>
-          <p>
-            What is Lorem Ipsum? Lorem Ipsum is simply dummy
-            text of the printing and typesetting industry.
-          </p>
-          {/* Display something weather answer is right or wrong */}
+          <p>{db.questions[0].question}</p>
+          <QuestionContainer.Options>
+            <button type="button">Option 1</button>
+            <button type="button">Option 2</button>
+            <button type="button">Option 3</button>
+            <button type="button">Option 4</button>
+          </QuestionContainer.Options>
+          <QuestionContainer.ButtonDiv>
+            <button type="button">Confirmar</button>
+          </QuestionContainer.ButtonDiv>
         </QuestionContainer.Content>
       </QuestionContainer>
     </QuizBackground>

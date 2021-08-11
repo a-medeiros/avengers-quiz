@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 import db from "../../../db.json";
 
 const MoreQuizes = styled.div`
