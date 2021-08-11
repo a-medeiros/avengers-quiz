@@ -7,28 +7,40 @@
       "question": "Em que ano foi lançado o primeiro Homem de Ferro?",
       "img": "/ironman.jpg",
       "alt": "Iron Man",
+      "options": ["2009", "2010", "2008", "2011"],
       "answer": "2008"
     },
     {
       "id": 2,
-      "question": "Em que ano foi lançado o primeiro Homem de Ferro?",
-      "img": "/ironman.jpg",
-      "alt": "Iron Man",
-      "answer": "2008"
+      "question": "Qual é a raça de alienígina que Loki envia para invadir a Terra em Os Vingadores?",
+      "img": "/os-vingadores.jpg",
+      "alt": "Os Vingadores",
+      "options": ["The Flerkens", "The Kree", "Os skrulls", "Os Chitauri"],
+      "answer": "Os Chitauri"
     },
     {
       "id": 3,
-      "question": "Em que ano foi lançado o primeiro Homem de Ferro?",
-      "img": "/ironman.jpg",
-      "alt": "Iron Man",
-      "answer": "2008"
+      "question": "Do que é feito o escudo do Capitão America?",
+      "img": "/escudo.jpg",
+      "alt": "Escudo",
+      "options": ["Promécio", "Adamantium", "Carbonádio", "Vibranium"],
+      "answer": "Vibranium"
     },
     {
       "id": 4,
-      "question": "Em que ano foi lançado Capitão America: Guerra Civil?",
-      "img": "/ironman.jpg",
-      "alt": "Iron Man",
-      "answer": "2008"
+      "question": "Antes de se tornar Vision, qual é o nome do mordomo de IA do Homem de Ferro?",
+      "img": "/vision.jpg",
+      "alt": "Vision",
+      "options": ["JARVIS", "MARVIN", "HOMER", "ALFRED"],
+      "answer": "JARVIS"
+    },
+    {
+      "id": 5,
+      "question": "Qual é o nome do martelo de Thor?",
+      "img": "/martelo.jpg",
+      "alt": "Martelo",
+      "options": ["Vanir", "Norn", "Mjolnir", "Aesir"],
+      "answer": "Mjolnir"
     }
   ],
   "bg": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages3.alphacoders.com%2F106%2F1060203.jpg&f=1&nofb=1",
