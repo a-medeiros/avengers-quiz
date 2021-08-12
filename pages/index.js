@@ -24,6 +24,7 @@ const QuizContainer = styled.section`
 
 export default function Home() {
   const [name, setName] = useState("");
+  const [isNameEmpty, setIsNameEmpty] = useState(false);
   const router = useRouter();
 
   return (
@@ -41,13 +42,20 @@ export default function Home() {
             <form onSubmit={(e) => {
               e.preventDefault();
               if (name === "") {
-                alert("Name cannot be empty!");
+                setIsNameEmpty(true);
               } else {
                 router.push(`/quiz?name=${name}`);
               }
             }}
             >
               <input id="name" name="name" value={name} onChange={(e) => setName(e.target.value)} placeholder="Diz aí o seu nome para jogar :)" />
+              {
+                isNameEmpty ? (
+                  <PlayQuiz.ErrorMessage>
+                    <span>Digite o seu nome!</span>
+                  </PlayQuiz.ErrorMessage>
+                ) : null
+              }
               <button type="submit">JOGAR</button>
             </form>
           </PlayQuiz.Content>

@@ -97,4 +97,11 @@ PlayQuiz.Content = styled.div`
 
 `;
 
+PlayQuiz.ErrorMessage = styled.div`
+  color: #f57c00;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+`;
+
 export default PlayQuiz;
