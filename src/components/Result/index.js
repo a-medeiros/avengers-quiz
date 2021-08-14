@@ -15,6 +15,13 @@ const ResultContainer = styled.section`
     padding: 15px 20px;
   }
 
+  @media (max-width: 700px) {
+    position: static;
+  }
+
+  @media (max-width: 600px) {
+    width: 330px;
+  }
 `;
 
 ResultContainer.Header = styled.header`

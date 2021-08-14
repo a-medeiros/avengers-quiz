@@ -61,8 +61,8 @@ QuestionContainer.Option = styled.label`
 `;
 
 QuestionContainer.Button = styled.button`
-  padding: 7px;
-  margin: 7px;
+  padding: 5px;
+  margin: 5px;
   color: white;
   margin-top: 15px;
   text-transform: uppercase;
@@ -75,10 +75,10 @@ QuestionContainer.Button = styled.button`
 `;
 
 QuestionContainer.Message = styled.div`
-  padding: 10px;
-  padding-bottom: 20px;
+  padding: 6px;
+  padding-bottom: 10px;
   i {
-    font-size: 50px;
+    font-size: 40px;
   }
 
   color: ${(props) => props.color}
