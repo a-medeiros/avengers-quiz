@@ -4,7 +4,7 @@ import db from "../../../db.json";
 const QuestionContainer = styled.section`
   position: absolute;
   background-color: ${db.theme.colors.secondary};
-  top: 100px;
+  top: 70px;
   left: 150px;
   width: 350px;
 
@@ -39,42 +39,49 @@ QuestionContainer.Content = styled.div`
     margin: 0;
     width: 280px;
   }
-
-  button {
-    width: 280px;
-    padding: 7px;
-    color: white;
-    font-weight: 700;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-  }
-
 `;
 
-QuestionContainer.Options = styled.div`
+QuestionContainer.Form = styled.form`
+  width: 300px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   margin: 15px 0px;
-
-  * {
-    margin: 7px;
-    background-color: #5c6bc0;
-    border: 1px solid #5c6bc0;
-    color: white;
-    text-align: left;
-    cursor: pointer;
-  }
 `;
 
-QuestionContainer.ButtonDiv = styled.div`
-  margin-bottom: 10px;
+QuestionContainer.Option = styled.label`
+  display: flex;
+  margin: 7px;
+  font-size: 15px;
+  background-color: #3949ab;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+`;
 
-  button {
-    text-transform: uppercase;
-    background-color: #9e9e9e;
-    border: 1px solid #9e9e9e;
-    cursor: pointer;
+QuestionContainer.Button = styled.button`
+  padding: 7px;
+  margin: 7px;
+  color: white;
+  margin-top: 15px;
+  text-transform: uppercase;
+  background-color: #9e9e9e;
+  border: 1px solid #9e9e9e;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 700;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+`;
+
+QuestionContainer.Message = styled.div`
+  padding: 10px;
+  padding-bottom: 20px;
+  i {
+    font-size: 50px;
   }
 
+  color: ${(props) => props.color}
 `;
 
 export default QuestionContainer;
