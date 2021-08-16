@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import QuizBackground from "../src/components/QuizBackground";
 import QuestionContainer from "../src/components/Question";
 import Result from "../src/components/Result";
@@ -15,6 +16,9 @@ function Quiz() {
   const [score, setScore] = useState(0);
   const totalQuestions = db.questions.length;
   const currentQuestion = db.questions[questionIndex];
+
+  const { query } = useRouter();
+  const { name } = query;
 
   function checkUserAnswer(e) {
     e.preventDefault();
@@ -48,6 +52,7 @@ function Quiz() {
       }, 2000);
     }
   }
+
   return (
     <QuizBackground>
       {
@@ -99,7 +104,7 @@ function Quiz() {
       }
       {
         isQuizFinished === true ? (
-          <Result score={score} totalQuestions={totalQuestions} />
+          <Result name={name} score={score} totalQuestions={totalQuestions} />
         ) : null
       }
     </QuizBackground>

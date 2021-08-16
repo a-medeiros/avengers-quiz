@@ -35,7 +35,7 @@ ResultContainer.Content = styled.div`
 `;
 
 // eslint-disable-next-line react/prop-types
-function Result({ score, totalQuestions }) {
+function Result({ score, totalQuestions, name }) {
   return (
     <ResultContainer>
       <ResultContainer.Header>
@@ -48,30 +48,42 @@ function Result({ score, totalQuestions }) {
         {
             score === totalQuestions ? (
               <div>
-                <p>Tu é o bichão mesmo! Acertou tudo!</p>
+                {/* eslint-disable-next-line react/jsx-one-expression-per-line */}
+                <p>Tu é o bichão mesmo, {name}! Acertou tudo!</p>
               </div>
             ) : null
         }
         {
             score > totalQuestions / 2 && score < totalQuestions ? (
               <div>
-                <p>Parabéns! Você acertou mais que a metade.</p>
+                {/* eslint-disable-next-line react/jsx-one-expression-per-line */}
+                <p>Mandou bem, {name}! Você acertou mais que a metade.</p>
               </div>
             ) : null
         }
         {
             score === totalQuestions / 2 ? (
               <div>
-                <p>Você acertou a metade! Não foi tão mal assim...</p>
+                {/* eslint-disable-next-line react/jsx-one-expression-per-line */}
+                <p>Parabéns, {name}! Você acertou a metade das perguntas.</p>
               </div>
             ) : null
         }
         {
-            score < totalQuestions / 2 ? (
+            score < totalQuestions / 2 && score !== 0 ? (
               <div>
-                <p>Tu não sabe de nada! Acertou menos que a metade.</p>
+                {/* eslint-disable-next-line react/jsx-one-expression-per-line */}
+                <p>{name}, você acertou menos que a metade.</p>
               </div>
             ) : null
+        }
+        {
+          score === 0 ? (
+            <div>
+              {/* eslint-disable-next-line react/jsx-one-expression-per-line */}
+              <p>{name}, você não acertou nenhuma das perguntas.</p>
+            </div>
+          ) : null
         }
       </ResultContainer.Content>
     </ResultContainer>
