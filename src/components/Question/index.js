@@ -61,7 +61,7 @@ QuestionContainer.Option = styled.label`
 `;
 
 QuestionContainer.Button = styled.button`
-  padding: 5px;
+  padding: 10px;
   margin: 5px;
   color: white;
   margin-top: 15px;
