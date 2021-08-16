@@ -40,7 +40,7 @@ function Result({ score, totalQuestions, name }) {
     <ResultContainer>
       <ResultContainer.Header>
         <h3>Resultado</h3>
-        <Image src="/os-vingadores.jpg" alt="Os Vingadores" width="350" height="200" objectFit="cover" />
+        <Image src="/guerra-infinita.jpg" alt="Os Vingadores" width="350" height="200" objectFit="cover" />
       </ResultContainer.Header>
       <ResultContainer.Content>
         {/* eslint-disable-next-line react/jsx-one-expression-per-line */}

@@ -4,43 +4,56 @@
   "questions": [
     {
       "id": 1,
-      "question": "Em que ano foi lançado o primeiro Homem de Ferro?",
-      "img": "/ironman.jpg",
-      "alt": "Iron Man",
-      "options": ["2009", "2010", "2008", "2011"],
-      "answer": "2008"
+      "question": "Quais são os nomes das joias do infinito?",
+      "img": "/joias.jpg",
+      "alt": "Joias do Infinito",
+      "options": [
+        "Espaço, mente, sentido, poder, tempo e alma",
+        "Mente, realidade, poder, tempo e alma", 
+        "Espaço, mente, realidade, poder, visão e alma", 
+        "Espaço, mente, tempo, poder, realidade e alma"
+      ],
+      "answer": "Espaço, mente, tempo, poder, realidade e alma"
     },
     {
       "id": 2,
-      "question": "Qual é a raça de alienígina que Loki envia para invadir a Terra em Os Vingadores?",
-      "img": "/os-vingadores.jpg",
-      "alt": "Os Vingadores",
-      "options": ["The Flerkens", "The Kree", "Os skrulls", "Os Chitauri"],
-      "answer": "Os Chitauri"
+      "question": "Qual joia Thanos pegou do Dr. Estranho?",
+      "img": "/thanos.jpg",
+      "alt": "Thanos",
+      "options": ["Realidade", "Poder", "Tempo", "Alma"],
+      "answer": "Tempo"
     },
     {
       "id": 3,
-      "question": "Do que é feito o escudo do Capitão America?",
-      "img": "/escudo.jpg",
-      "alt": "Escudo",
-      "options": ["Promécio", "Adamantium", "Carbonádio", "Vibranium"],
-      "answer": "Vibranium"
+      "question": "De que planeta Thanos é?",
+      "img": "/thanos2.jpg",
+      "alt": "Thanos",
+      "options": ["Vormir", "Earth", "Knowhere", "Titan"],
+      "answer": "Titan"
     },
     {
       "id": 4,
-      "question": "Antes de se tornar Vision, qual é o nome do mordomo de IA do Homem de Ferro?",
-      "img": "/vision.jpg",
-      "alt": "Vision",
-      "options": ["JARVIS", "MARVIN", "HOMER", "ALFRED"],
-      "answer": "JARVIS"
+      "question": "Qual a cor da joia do espaço?",
+      "img": "/guerra-infinita.jpg",
+      "alt": "Guerra Infinita",
+      "options": ["Roxa", "Amarela", "Azul", "Verde"],
+      "answer": "Azul"
     },
     {
       "id": 5,
-      "question": "Qual é o nome do martelo de Thor?",
-      "img": "/martelo.jpg",
-      "alt": "Martelo",
-      "options": ["Vanir", "Norn", "Mjolnir", "Aesir"],
-      "answer": "Mjolnir"
+      "question": "Qual joia é usada pelo Thanos para se locomover no espaço-tempo?",
+      "img": "/thanos3.jpg",
+      "alt": "Thanos",
+      "options": ["Tempo", "Espaço", "Realidade", "Poder"],
+      "answer": "Espaço"
+    },
+    {
+      "id": 6,
+      "question": "Com quem está a Jóia da Mente?",
+      "img": "/joias.jpg",
+      "alt": "Joias",
+      "options": ["Visão", "Loki", "Gamora", "Doutor Estranho"],
+      "answer": "Visão"
     }
   ],
   "bg": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages3.alphacoders.com%2F106%2F1060203.jpg&f=1&nofb=1",
