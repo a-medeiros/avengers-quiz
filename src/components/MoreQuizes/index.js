@@ -1,8 +1,7 @@
 import styled from "styled-components";
-import db from "../../../db.json";
 
-const MoreQuizes = styled.div`
-  background-color: ${db.theme.colors.secondary};
+const MoreQuizes = styled.section`
+  background-color: ${({ theme }) => theme.colors.mainBg};
   width: 350px;
 
   h1, h2, h3 {
@@ -17,26 +16,42 @@ const MoreQuizes = styled.div`
 
 MoreQuizes.Header = styled.header`
   color: white;
-  background-color: ${db.theme.colors.primary};
+  background-color: ${({ theme }) => theme.colors.primary};
 `;
 
 MoreQuizes.Content = styled.div`
+  margin: 0;
   color: white;
-  height: 150px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  padding: 30px;
+  padding: 20px;
 
   p {
-    line-height: 1;
-    padding-bottom: 10px;
     font-size: 16px;
-    max-width: 310px;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 10px;
   }
 
+  ul {
+    list-style: none;
+    padding: 0;
+  }
 
+  li {
+    list-style: none;
+  }
+
+`;
+
+MoreQuizes.Topic = styled.a`
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  display: block;
+  background-color: ${({ theme }) => theme.colors.primary}
 `;
 
 export default MoreQuizes;

@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import Head from "next/head";
+import { motion } from "framer-motion";
 import { useRouter } from "next/router";
 import PlayQuiz from "../src/components/PlayQuiz";
 import MoreQuizes from "../src/components/MoreQuizes";
 import QuizBackground from "../src/components/QuizBackground";
+import db from "../db.json";
 
 const QuizContainer = styled.section`
   position: absolute;
@@ -28,12 +30,17 @@ export default function Home() {
   const router = useRouter();
 
   return (
-    <QuizBackground>
+    <QuizBackground bg={db.bg}>
       <Head>
         <title>Avengers Quiz</title>
       </Head>
       <QuizContainer>
-        <PlayQuiz>
+        <PlayQuiz
+          as={motion.section}
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{ delay: 0.1, duration: 0.5 }}
+        >
           <PlayQuiz.Header>
             <h2>Avengers</h2>
           </PlayQuiz.Header>
@@ -60,12 +67,27 @@ export default function Home() {
             </form>
           </PlayQuiz.Content>
         </PlayQuiz>
-        <MoreQuizes>
-          <MoreQuizes.Header>
-            <h3>Quizes da Galera</h3>
-          </MoreQuizes.Header>
+        <MoreQuizes
+          as={motion.section}
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{ delay: 0.3, duration: 0.5 }}
+        >
           <MoreQuizes.Content>
             <p>Dá uma olhada nesses Quizes incríveis...</p>
+            <ul>
+              { db.external.map((quizLink) => {
+                const link = quizLink
+                  .replace(/\//g, "")
+                  .replace("https:", "")
+                  .replace(".vercel.app", "");
+                return (
+                  <li key={quizLink}>
+                    <MoreQuizes.Topic href={`/quiz/${link}`}>{link}</MoreQuizes.Topic>
+                  </li>
+                );
+              })}
+            </ul>
           </MoreQuizes.Content>
         </MoreQuizes>
       </QuizContainer>

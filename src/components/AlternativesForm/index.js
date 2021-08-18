@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import db from "../../../db.json";
 
 const AlternativesForm = styled.form`
   width: 300px; 
@@ -12,19 +11,19 @@ const AlternativesForm = styled.form`
   label {
     width: 270px; 
     &[data-selected="true"] { 
-      background-color: #ffc107;
+      background-color: ${({ theme }) => theme.colors.primary};
 
       &[data-status="SUCCESS"] {
-        background-color: ${db.theme.colors.success}
+        background-color: ${({ theme }) => theme.colors.success}
       }
 
       &[data-status="ERROR"] {
-        background-color: ${db.theme.colors.wrong}
+        background-color: ${({ theme }) => theme.colors.wrong}
       }
     }
 
     &[data-correct-answer="true"] {
-      background-color: ${db.theme.colors.success}
+      background-color: ${({ theme }) => theme.colors.success}
     }
   }
 

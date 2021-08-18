@@ -1,11 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import Image from "next/image";
-import db from "../../../db.json";
 
 const ResultContainer = styled.section`
   position: absolute;
-  background-color: ${db.theme.colors.secondary};
+  background-color: ${({ theme }) => theme.colors.mainBg};
   top: 70px;
   left: 150px;
   width: 350px;
@@ -26,7 +24,7 @@ const ResultContainer = styled.section`
 
 ResultContainer.Header = styled.header`
     color: white;
-    background-color: ${db.theme.colors.primary};
+    background-color: ${({ theme }) => theme.colors.primary};
 `;
 
 ResultContainer.Content = styled.div`
@@ -36,11 +34,11 @@ ResultContainer.Content = styled.div`
 
 // eslint-disable-next-line react/prop-types
 function Result({ score, totalQuestions, name }) {
+  const username = name === undefined ? "Anônimo" : name;
   return (
     <ResultContainer>
       <ResultContainer.Header>
         <h3>Resultado</h3>
-        <Image src="/guerra-infinita.jpg" alt="Os Vingadores" width="350" height="200" objectFit="cover" />
       </ResultContainer.Header>
       <ResultContainer.Content>
         {/* eslint-disable-next-line react/jsx-one-expression-per-line */}
@@ -49,7 +47,7 @@ function Result({ score, totalQuestions, name }) {
             score === totalQuestions ? (
               <div>
                 {/* eslint-disable-next-line react/jsx-one-expression-per-line */}
-                <p>Tu é o bichão mesmo, {name}! Acertou tudo!</p>
+                <p>Tu é o bichão mesmo, {username}! Acertou tudo!</p>
               </div>
             ) : null
         }
@@ -57,7 +55,7 @@ function Result({ score, totalQuestions, name }) {
             score > totalQuestions / 2 && score < totalQuestions ? (
               <div>
                 {/* eslint-disable-next-line react/jsx-one-expression-per-line */}
-                <p>Mandou bem, {name}! Você acertou mais que a metade.</p>
+                <p>Mandou bem, {username}! Você acertou mais que a metade.</p>
               </div>
             ) : null
         }
@@ -65,7 +63,7 @@ function Result({ score, totalQuestions, name }) {
             score === totalQuestions / 2 ? (
               <div>
                 {/* eslint-disable-next-line react/jsx-one-expression-per-line */}
-                <p>Parabéns, {name}! Você acertou a metade das perguntas.</p>
+                <p>Parabéns, {username}! Você acertou a metade das perguntas.</p>
               </div>
             ) : null
         }
@@ -73,7 +71,7 @@ function Result({ score, totalQuestions, name }) {
             score < totalQuestions / 2 && score !== 0 ? (
               <div>
                 {/* eslint-disable-next-line react/jsx-one-expression-per-line */}
-                <p>{name}, você acertou menos que a metade.</p>
+                <p>{username}, você acertou menos que a metade.</p>
               </div>
             ) : null
         }
@@ -81,7 +79,7 @@ function Result({ score, totalQuestions, name }) {
           score === 0 ? (
             <div>
               {/* eslint-disable-next-line react/jsx-one-expression-per-line */}
-              <p>{name}, você não acertou nenhuma das perguntas.</p>
+              <p>{username}, você não acertou nenhuma das perguntas.</p>
             </div>
           ) : null
         }

@@ -1,8 +1,7 @@
 import styled from "styled-components";
-import db from "../../../db.json";
 
-const PlayQuiz = styled.div`
-  background-color: ${db.theme.colors.secondary};
+const PlayQuiz = styled.section`
+  background-color: ${({ theme }) => theme.colors.mainBg};
   width: 350px;
   margin-bottom: 30px;
 
@@ -19,7 +18,7 @@ const PlayQuiz = styled.div`
 
 PlayQuiz.Header = styled.header`
   color: white;
-  background-color: ${db.theme.colors.primary};
+  background-color: ${({ theme }) => theme.colors.primary};
 `;
 
 PlayQuiz.Content = styled.div`

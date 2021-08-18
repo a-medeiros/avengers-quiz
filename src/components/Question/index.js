@@ -1,9 +1,8 @@
 import styled from "styled-components";
-import db from "../../../db.json";
 
 const QuestionContainer = styled.section`
   position: absolute;
-  background-color: ${db.theme.colors.secondary};
+  background-color: ${({ theme }) => theme.colors.mainBg};
   top: 70px;
   left: 150px;
   width: 350px;
@@ -24,7 +23,7 @@ const QuestionContainer = styled.section`
 
 QuestionContainer.Header = styled.header`
   color: white;
-  background-color: ${db.theme.colors.primary};
+  background-color: ${({ theme }) => theme.colors.primary};
 `;
 
 QuestionContainer.Content = styled.div`
@@ -53,7 +52,7 @@ QuestionContainer.Option = styled.label`
   display: flex;
   margin: 7px;
   font-size: 15px;
-  background-color: #3949ab;
+  background-color: ${({ theme }) => `${theme.colors.primary}40`};
   color: white;
   padding: 10px;
   cursor: pointer;

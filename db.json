@@ -1,69 +1,67 @@
 {
+  "bg": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages3.alphacoders.com%2F106%2F1060203.jpg&f=1&nofb=1",
   "title": "Título do Quiz",
   "description": "Descrição do projeto",
   "questions": [
     {
       "id": 1,
-      "question": "Quais são os nomes das joias do infinito?",
-      "img": "/joias.jpg",
-      "alt": "Joias do Infinito",
-      "options": [
+      "title": "Quais são os nomes das joias do infinito?",
+      "image": "/joias.jpg",
+      "alternatives": [
         "Espaço, mente, sentido, poder, tempo e alma",
         "Mente, realidade, poder, tempo e alma", 
         "Espaço, mente, realidade, poder, visão e alma", 
         "Espaço, mente, tempo, poder, realidade e alma"
       ],
-      "answer": "Espaço, mente, tempo, poder, realidade e alma"
+      "answer": 3
     },
     {
       "id": 2,
-      "question": "Qual joia Thanos pegou do Dr. Estranho?",
-      "img": "/thanos.jpg",
-      "alt": "Thanos",
-      "options": ["Realidade", "Poder", "Tempo", "Alma"],
-      "answer": "Tempo"
+      "title": "Qual joia Thanos pegou do Dr. Estranho?",
+      "image": "/thanos.jpg",
+      "alternatives": ["Realidade", "Poder", "Tempo", "Alma"],
+      "answer": 2
     },
     {
       "id": 3,
-      "question": "De que planeta Thanos é?",
-      "img": "/thanos2.jpg",
-      "alt": "Thanos",
-      "options": ["Vormir", "Earth", "Knowhere", "Titan"],
-      "answer": "Titan"
+      "title": "De que planeta Thanos é?",
+      "image": "/thanos2.jpg",
+      "alternatives": ["Vormir", "Earth", "Knowhere", "Titan"],
+      "answer": 3
     },
     {
       "id": 4,
-      "question": "Qual a cor da joia do espaço?",
-      "img": "/guerra-infinita.jpg",
-      "alt": "Guerra Infinita",
-      "options": ["Roxa", "Amarela", "Azul", "Verde"],
-      "answer": "Azul"
+      "title": "Qual a cor da joia do espaço?",
+      "image": "/guerra-infinita.jpg",
+      "alternatives": ["Roxa", "Amarela", "Azul", "Verde"],
+      "answer": 2
     },
     {
       "id": 5,
-      "question": "Qual joia é usada pelo Thanos para se locomover no espaço-tempo?",
-      "img": "/thanos3.jpg",
-      "alt": "Thanos",
-      "options": ["Tempo", "Espaço", "Realidade", "Poder"],
-      "answer": "Espaço"
+      "title": "Qual joia é usada pelo Thanos para se locomover no espaço-tempo?",
+      "image": "/thanos3.jpg",
+      "alternatives": ["Tempo", "Espaço", "Realidade", "Poder"],
+      "answer": 1
     },
     {
       "id": 6,
-      "question": "Com quem está a Jóia da Mente?",
-      "img": "/joias.jpg",
-      "alt": "Joias",
-      "options": ["Visão", "Loki", "Gamora", "Doutor Estranho"],
-      "answer": "Visão"
+      "title": "Com quem está a Jóia da Mente?",
+      "image": "/joias.jpg",
+      "alternatives": ["Visão", "Loki", "Gamora", "Doutor Estranho"],
+      "answer": 0
     }
   ],
-  "bg": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages3.alphacoders.com%2F106%2F1060203.jpg&f=1&nofb=1",
   "theme": {
     "colors": {
-      "primary": "#3f51b5",
-      "secondary": "#2c387e",
+      "primary": "#0d47a1",
+      "secondary": "#29b6f6",
+      "mainBg": "#171B35",
       "success": "#00a152",
-      "wrong": "#d50000",
-      "mainBg": "#000"
+      "wrong": "#d50000"
     }
-  }
+  },
+  "external": [
+    "https://quiz-star-wars-mattheussal.vercel.app/",
+    "https://universe-quiz-gustavoherreronunes.vercel.app/"
+  ]
 }
