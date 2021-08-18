@@ -7,7 +7,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "eslint:init": "eslint --init"
+    "eslint:init": "eslint --init",
+    "lint": "eslint ./ --fix"
   },
   "author": "Ana",
   "license": "ISC",
