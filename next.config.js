@@ -1,8 +1,8 @@
 module.exports = {
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   images: {
-    eslint: {
-      ignoreDuringBuilds: true,
-    },
     domains: [
       "olhardigital.com.br",
       "jovemnerd.com.br",
